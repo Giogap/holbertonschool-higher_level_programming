@@ -9,4 +9,3 @@ elif number == 0:
     print(f"Last digit of {number} is {n_last_p} and is 0")
 elif number < 6 != 0:
     print(f"Last digit of {number} is {n_last_n} and is less than 6 and not 0")
-
