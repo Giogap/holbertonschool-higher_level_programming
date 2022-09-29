@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    return max(a_dictionary.values())
+    if a_dictionary:
+        return (sorted(a_dictionary, key=a_dictionary.get))[-1]
