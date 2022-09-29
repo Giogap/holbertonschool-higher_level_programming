@@ -5,7 +5,7 @@ def roman_to_int(roman_string):
     romano = list(roman_string)
     for i in range(len(roman_string)):
         if i > 0 and dic_r[romano[i]] > dic_r[romano[i - 1]]:
-            acum += dic_r[romano[i]] - 2 
+            acum += dic_r[romano[i]] - 2 * dic_r[romano[i - 1]]
         else:
             acum += dic_r[romano[i]]
     return acum
