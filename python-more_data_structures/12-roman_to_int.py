@@ -4,7 +4,7 @@ def roman_to_int(roman_string):
     acum = 0
     for i in range(len(roman_string)):
         if i > 0 and dictionary_r[roman_string[i]] > dictionary_r[roman_string[i - 1]]:
-            acum += dictionary_r[roman_string[i]] - dictionary_r[roman_string[i - 1]]
+            acum += dictionary_r[roman_string[i]] - 2 * dictionary_r[roman_string[i - 1]]
         else:
             acum += dictionary_r[roman_string[i]]
     return acum
