@@ -1,53 +1,60 @@
 #!/usr/bin/python3
 
-""" Class Square """
+""" Class project - square class """
 
 
 class Square:
     """ create Square size private"""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
-        return self.__size * self.__size
+        return (self.__size * self.__size)
 
     @property
     def size(self):
-        return self.__size
+        return (self.__size)
 
     @size.setter
-    def size(self, size):
-        if not isinstance(size, int):
+    def size(self, value):
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        else:
+            self.__size = value
 
     @property
     def position(self):
-        return self.__position
+        return (self.__position)
 
     @position.setter
     def position(self, value):
-        if (type(value) != tuple or len(value) != 2):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif any(not isinstance(num, int) for num in value):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif any(num < 0 for num in value):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
+        if type(value) is tuple and len(value) == 2:
             self.__position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if isinstance(value[0], int) and isinstance(value[1], int):
+            self.__position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if value[0] >= 0 and value[1] >= 0:
+            self.__position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
-        if self.__size == 0:
+        size = self.__size
+        position = self.__position
+        if size == 0:
             print("")
         else:
-            for i in range(0, self.__position[1]):
-                print()
-            for j in range(0, self.__size):
-                for space in range(0, self.__position[0]):
-                    print(" ", end="")
-                for k in range(0, self.__size):
-                    print("#", end="")
-                print()
+            for n in range(position[1]):
+                print("")
+            for i in range(size):
+                for j in range(position[0]):
+                    print(' ', end="")
+                for k in range(size):
+                    print('#', end="")
+                print("")
