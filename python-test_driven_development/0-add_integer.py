@@ -5,7 +5,7 @@ The 0-add_integer module is function that adds 2 integers, add_integer(a, b).
 
 
 def add_integer(a, b=98):
-    """ 
+    """
     Returns an integer: the addition of a and b
     """
     if type(a) is not int and type(a) is not float:
