@@ -1,0 +1,33 @@
+This is the "5-text_indentation.py" module
+======================
+
+Using ``5-text_indentation.py``
+-------------------
+
+Write a function that prints a text with 2 new lines after each of these characters: ., ? and :
+
+    Prototype: def text_indentation(text):
+    text must be a string, otherwise raise a TypeError exception with the message text must be a string
+    There should be no space at the beginning or at the end of each printed line
+    You are not allowed to import any module
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+    >>> text_indentation('Lorem ipsum: dolor sit? amet')
+    Lorem ipsum:
+    <BLANKLINE>
+    dolor sit?
+    <BLANKLINE>
+    amet
+
+Error ouput
+
+    >>> text_indentation(842)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'i
