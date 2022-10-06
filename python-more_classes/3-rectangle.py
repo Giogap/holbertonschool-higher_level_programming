@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-""" This is rectangle class """
+"""
+
+"""
 
 
 class Rectangle:
-    """ create rectangle """
-
+    """   """
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
@@ -17,14 +18,6 @@ class Rectangle:
     def width(self):
         return self.__width
 
-    @width.setter
-    def width(self, width):
-        if type(width) is not int:
-            raise TypeError("width must be an integer")
-        if width < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = width
-
     @height.setter
     def height(self, height):
         if type(height) is not int:
@@ -33,12 +26,25 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = height
 
+    @width.setter
+    def width(self, width):
+        if type(width) is not int:
+            raise TypeError("width must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = width
+
     def area(self):
-        return (self.__width * self.__height)
+        return (self.__height * self.__width)
 
     def perimeter(self):
-        if self.__width == 0 or self.__height == 0:
+        if self.__height == 0 or self.__width == 0:
             perimeter = 0
         else:
-            perimeter = 2 * (self.__width + self.__height)
+            perimeter = 2 * (self.__height + self.__width)
         return perimeter
+
+    def __str__(self):
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        return '\n'.join('#' * self.__width for _ in range(self.__height))
