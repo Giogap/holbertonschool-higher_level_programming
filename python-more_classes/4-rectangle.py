@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """ This is empty class """
 
 
@@ -50,4 +49,4 @@ class Rectangle:
         return '\n'.join('#' * self.__width for _ in range(self.__height))
 
     def __repr__(self):
-        return "Rectangle({}, {})".format(eval(str(self.__height)))
+        return "Rectangle({}, {})".format(eval(str(self.__width)), eval(str(self.__height)))
