@@ -12,6 +12,16 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
+    @property
+    def width(self):
+        """Get the width"""
+        return self.__width
+
+    @property
+    def height(self):
+        """Get the height"""
+        return self.__height
+
     def __str__(self):
         """Print the rectangle with the '#'"""
         string = ''
@@ -29,16 +39,6 @@ class Rectangle:
         """Delete the rectangle"""
         print('Bye rectangle...')
         Rectangle.number_of_instances -= 1
-
-    @property
-    def width(self):
-        """Get the width"""
-        return self.__width
-
-    @property
-    def height(self):
-        """Get the height"""
-        return self.__height
 
     @width.setter
     def width(self, value):
