@@ -58,5 +58,5 @@ class Rectangle:
             eval(str(self.__width)), eval(str(self.__height)))
 
     def __del__(self):
-        print("bye rectangle...")
         Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
