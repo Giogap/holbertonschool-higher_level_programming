@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-"""Rectangle Class"""
+""" Rectangle Class """
 
 
 class Rectangle:
-    """Defines a rectangle"""
+    """ Defines a rectangle """
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width = 0, height = 0):
-        """Initialize"""
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
-        print_symbol = "#"
 
     @property
     def width(self):
