@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-0. Lookup
-"""
+""" 0. Lookup """
 
 
 def lookup(obj):
