@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""My list"""
+"""Class MyList"""
 
 
-def print_sorted(self):
-    pass
+class MyList(list):
+    """Class MyList that inherits from list"""
+    def print_sorted(self):
+        print (sorted(self))
