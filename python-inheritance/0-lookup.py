@@ -5,5 +5,5 @@
 
 
 def lookup(obj):
-    """Return list of available attributes, methods of object"""
+    """Return list of an object"""
     return id(obj)
