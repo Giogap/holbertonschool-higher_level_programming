@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" Same class or inherit from  """
+""" Exact same object """
 
 
-def is_kind_of_class(obj, a_class):
-    """ object is an instance of instance class  """
+def is_same_class(obj, a_class):
+    """ the object is an instance of the specified class """
     return type(obj) is a_class
