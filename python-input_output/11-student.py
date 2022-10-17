@@ -21,4 +21,3 @@ class Student:
 
     def reload_from_json(self, json):
         self.__dict__.update(json)
-    
