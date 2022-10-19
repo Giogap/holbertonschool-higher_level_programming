@@ -2,7 +2,6 @@
 """ class Base """
 
 
-
 class Base:
     """ Doc """
     __nb_objects = 0
