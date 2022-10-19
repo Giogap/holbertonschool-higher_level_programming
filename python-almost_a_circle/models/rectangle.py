@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """First Rectangle"""
-Base = __import__('base').Base
+
+from models.base import Base
 
 
 class Rectangle:
@@ -10,6 +11,7 @@ class Rectangle:
         self.__height = height
         self.__x = x
         self.__y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -19,11 +21,26 @@ class Rectangle:
     def height(self):
         return self.__height
 
+    @property
+    def x(self):
+        return self.__x
+
+    @property
+    def y(self):
+        return self.__y
+
     @width.setter
-    def width(self):
-        pass
+    def width(self, width):
+        self.__width = width
 
     @height.setter
-    def wheight(self):
-        pass
+    def height(self, height):
+        self.__height = height
 
+    @x.setter
+    def x(self, x):
+        self.__x = x
+
+    @y.setter
+    def y(self, y):
+        self.__y = y
