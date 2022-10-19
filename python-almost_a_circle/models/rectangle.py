@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """First Rectangle"""
 
+from multiprocessing.sharedctypes import Value
 from models.base import Base
 
 
@@ -34,7 +35,7 @@ class Rectangle(Base):
     def width(self, width):
         if width <= 0:
             raise ValueError("width must be int")
-        if width is not int:
+        if type(Value) != int:
             raise TypeError("width must be integger")
         self.__width = width
 
@@ -42,7 +43,7 @@ class Rectangle(Base):
     def height(self, height):
         if height <= 0:
             raise ValueError("height must be > 0")
-        if height is not int:
+        if type(Value) != int:
             raise TypeError("height must be integger")
         self.__height = height
 
@@ -50,7 +51,7 @@ class Rectangle(Base):
     def x(self, x):
         if x < 0:
             raise ValueError("x must be >= 0")
-        if x is not int:
+        if type(Value) != int:
             raise TypeError("x must be integger")  
         self.__x = x
 
@@ -58,6 +59,6 @@ class Rectangle(Base):
     def y(self, y):
         if y < 0:
             raise ValueError("y must be >= 0")
-        if y is not int:
+        if type(Value) != int:
             raise TypeError("y must be integger")
         self.__y = y
