@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """Base class"""
+__nb_objects = 0
 
 
 class Base:
     """Doc"""
-    __nb_objects = 0
+    
 
     def __init__(self, id=None):
         if id is not None:
