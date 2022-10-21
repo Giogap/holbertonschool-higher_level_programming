@@ -45,5 +45,7 @@ class Base:
         return json.loads(json_string)
 
 
-    def update(self, *args, **kwargs):
-        """ Update """
+    def update(cls, **dictionary):
+        if cls.__name__ == "Square":
+            pass
+        
