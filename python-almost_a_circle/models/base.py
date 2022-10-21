@@ -5,8 +5,6 @@
 import json
 from queue import Empty
 
-from models.rectangle import Rectangle
-
 
 
 class Base:
