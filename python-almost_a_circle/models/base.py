@@ -47,5 +47,5 @@ class Base:
 
     def update(cls, **dictionary):
         if cls.__name__ == "Square":
-            pass
+            dummy = cls(1, 1)
         
