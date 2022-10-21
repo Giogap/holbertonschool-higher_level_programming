@@ -42,7 +42,7 @@ class Base:
             return []
         return json.loads(json_string)
 
-
+    @classmethod
     def update(cls, **dictionary):
         if cls.__name__ == "Square":
             dummy = cls(1, 1)
