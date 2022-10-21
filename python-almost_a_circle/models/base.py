@@ -2,9 +2,11 @@
 """ class Base """
 
 
-from fileinput import filename
 import json
 from queue import Empty
+
+from models.rectangle import Rectangle
+
 
 
 class Base:
@@ -41,3 +43,7 @@ class Base:
         if json_string is None or json_string is Empty:
             return []
         return json.loads(json_string)
+
+
+    def update(self, *args, **kwargs):
+            pass

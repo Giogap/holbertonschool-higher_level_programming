@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""And now, the Square!"""
+""" And now, the Square! """
 
 
-from ctypes import sizeof
+
 from models.rectangle import Rectangle
 
 
