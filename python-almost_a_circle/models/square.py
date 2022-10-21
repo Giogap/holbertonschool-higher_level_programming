@@ -25,6 +25,7 @@ class Square(Rectangle):
         self.height = size
 
     def update(self, *args, **kwargs):
+        """adding the public method"""
         if len(args) > 0:
             if args[0] is not None:
                 self.id = args[0]
@@ -34,6 +35,7 @@ class Square(Rectangle):
                 self.x = args[2]
             if len(args) > 3:
                 self.y = args[3]
+
         if len(kwargs) > 0:
             if 'id' in kwargs:
                 self.id = kwargs['id']
