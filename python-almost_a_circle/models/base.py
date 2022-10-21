@@ -6,7 +6,6 @@ import json
 from queue import Empty
 
 
-
 class Base:
     """ Doc """
     __nb_objects = 0
@@ -46,4 +45,8 @@ class Base:
     def update(cls, **dictionary):
         if cls.__name__ == "Square":
             dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
         
