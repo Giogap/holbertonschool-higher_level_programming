@@ -46,4 +46,4 @@ class Base:
 
 
     def update(self, *args, **kwargs):
-            pass
+        """ Update """
