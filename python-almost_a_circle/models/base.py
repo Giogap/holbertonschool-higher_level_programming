@@ -51,6 +51,13 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        filename = cls.__name__ + ".csv"
-        n_list = []
-        pass
+        """ Return list instances """
+        filename = cls.__name__+".json"
+        if filename is None:
+            return []
+        else:
+            with open(filename, encoding="utf-8") as f:
+                resul = f.read()
+                json_resul = cls.from_json_string(resul)
+                newList = [cls.create(**obj) for obj in json_resul]
+                return newList
