@@ -21,3 +21,10 @@ class TestBase(unittest.TestCase):
     def testBaseJsonStrNone(self):
         test = Base.to_json_string(None)
         self.assertEqual(test, "[]")
+
+    def testFromJStr(self):
+        self.assertIsNotNone(Base.from_json_string)
+
+    def testFromJStrEmpy(self):
+        test = Base.from_json_string(None)
+        self.assertEqual(test, [])
