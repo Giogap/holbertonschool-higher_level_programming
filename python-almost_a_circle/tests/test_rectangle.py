@@ -12,6 +12,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.width, 1)
         self.assertEqual(r.height, 2)
 
-    def TestRecStr(self):
+    def TestRecStrW(self):
         with self.assertRaises(TypeError):
             r = Rectangle("1", 2)
+
+    def TestRecStrH(self):
+        with self.assertRaises(TypeError):
+            r = Rectangle(1, "2")
