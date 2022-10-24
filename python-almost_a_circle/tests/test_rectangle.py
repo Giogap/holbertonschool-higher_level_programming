@@ -11,4 +11,7 @@ class TestRectangle(unittest.TestCase):
         r = Rectangle(1, 2)
         self.assertEqual(r.width, 1)
         self.assertEqual(r.height, 2)
-        
+
+    def TestRecStr(self):
+        with self.assertRaises(TypeError):
+            r = Rectangle("1", 2)
