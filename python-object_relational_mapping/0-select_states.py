@@ -4,15 +4,15 @@
 import MySQLdb
 from sys import argv
 
+
 def mysqlconnect():
-    """"""
     db = MySQLdb.connect(
         host="localhost",
         user=argv[1],
-        password="",
+        password='',
         database=argv[3],
         port=3306
-    )
+        )
 
     cursor = db.cursor()
 
@@ -23,6 +23,7 @@ def mysqlconnect():
         print(col)
 
     db.close()
-    
+
+
 if __name__ == "__main__":
     mysqlconnect()
