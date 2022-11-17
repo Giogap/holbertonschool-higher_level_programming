@@ -8,7 +8,6 @@ from sys import argv
 
 
 def mysqlconnect():
-    """ Function for connecting to MySQL database"""
     db = MySQLdb.connect(
         host="localhost",
         user=argv[1],
