@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-if (process.argv.slice(0)) {
+if (process.argv.slice(20)) {
     console.log('No argument');
 }
 else if (process.argv.slice(4)) {
