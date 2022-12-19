@@ -1,3 +1,7 @@
 #!/usr/bin/node
 
-console.log(process.argv);
+process.argv.slice(1);
+
+if (process.argv < 1) {
+    console.log('No argument')
+}
