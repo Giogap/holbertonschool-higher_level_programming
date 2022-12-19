@@ -1,9 +1,9 @@
 #!/usr/bin/node
 
-if (proces.argv === 1) {
+if (proces.argv.length === 1) {
     console.log('Argument found');
 }
-else if (proces.argv > 1) {
+else if (proces.argv.length > 1) {
     console.log('Arguments found');
 }
 else {
