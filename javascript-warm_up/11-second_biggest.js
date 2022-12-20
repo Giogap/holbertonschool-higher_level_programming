@@ -1,10 +1,8 @@
 #!/usr/bin/node
 
 
-const n = process.argv.length 
+const len = process.argv.length - 2;
 
-if (n === 1 || isNaN(n)) {
-    return 1;
+if (len <= 1 || isNaN(len)) {
+    console.log(0);
 }
-
-console.log(n)
