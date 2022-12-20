@@ -6,3 +6,5 @@ const n = process.argv.length
 if (n === 1 || isNaN(n)) {
     return 1;
 }
+
+console.log(n)
