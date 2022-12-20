@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 function factorial (n) {
-    for (i = n; i = 0; i--) {
-        
-    }
-}
+  return n; 
+  }  
+
+console.log(parseInt(peocess.argv[2]))
