@@ -1,7 +1,10 @@
 #!/usr/bin/node
 
 function factorial (n) {
-  return n; 
-  }  
+    if (n === 1|| isNaN(n)) {
+        return 1
+    }
+}
+  
 
-console.log(parseInt(peocess.argv[2]))
+console.log(parseInt(process.argv[2]))
