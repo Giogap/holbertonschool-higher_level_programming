@@ -5,18 +5,26 @@ class Rectangle {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
-      }
     }
-    print () {
-        for (let i = 0; i < this.height; i++) {
-            console.log('X'.repeat(this.width));
-        }
-    }
-    rotate () {
+  }
 
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      console.log('X'.repeat(this.width));
     }
-    double () {
-        
-    }
-}
+  }
 
+  rotate () {
+    let aux1 = this.width;
+    let aux2 = this.height;
+    this.width = aux2;
+    this.height = aux1;    
+  }  
+
+  double () {
+    this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
+};
+
+module.exports = Rectangle;
