@@ -16,4 +16,3 @@ request.get(url, 'utf8', function (err, res, body) {
     }
   });
 });
-
